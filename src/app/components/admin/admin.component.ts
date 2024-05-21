@@ -9,16 +9,17 @@ import { GenericService } from 'src/app/services/generic.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  //initializing the list
   public warList: War[] = [];
   public isEditing: boolean = false;
   public editedWar: War | null = null;
-
+// Form control for war, it is a way to save user input and send it somewhere needed
   warForm: FormGroup = new FormGroup({
     warName: new FormControl('', Validators.required),
     deathCount: new FormControl('', Validators.required),
     location: new FormControl('', Validators.required),
   });
-
+// Form control for editing war
   editForm: FormGroup = this.formBuilder.group({
     warName: ['', Validators.required],
     deathCount: ['', Validators.required],
@@ -29,17 +30,20 @@ export class AdminComponent implements OnInit {
     private service: GenericService<War>,
     private formBuilder: FormBuilder
   ) {}
-
+// getall will run when Angular initializes the component. 
   ngOnInit(): void {
     this.getAll();
   }
-
+//I call the getall method from generic.service.ts.//
+//I call a table called war and it want it in a list of arrays//
   getAll(): void {
     this.service.getAll('war').subscribe(data => {
       this.warList = data;
     });
   }
-
+// getting value from warForm
+// sending it to a table called war
+// if not possible show error message
   create(): void {
     if (this.warForm.valid) {
       const warData = { ...this.warForm.value };
@@ -57,7 +61,8 @@ export class AdminComponent implements OnInit {
       console.log('Form is invalid. Cannot create war.');
     }
   }
-
+// getting value from war defined as id:number
+// if it works it will show the updated list
   deleteWar(id: number | undefined): void {
     if (id !== undefined) {
       this.service.delete('war', id).subscribe(result => {
@@ -72,7 +77,9 @@ export class AdminComponent implements OnInit {
       console.error('Cannot delete. War ID is undefined.');
     }
   }
-
+// sets the editing flag to true
+// stores the war being edited
+// populate edit form with war details
   editWar(war: War): void {
     this.isEditing = true;
     this.editedWar = war;
@@ -82,7 +89,9 @@ export class AdminComponent implements OnInit {
       location: war.location
     });
   }
-
+// sets the editing to false
+// clears the war
+// and resets the edit form
   cancelEdit(): void {
     this.isEditing = false;
     this.editedWar = null;
@@ -91,8 +100,11 @@ export class AdminComponent implements OnInit {
 
   updateWar(): void {
     if (this.editForm.valid && this.editedWar) {
+      // Create an updated war object with form values merged into the edited war.
       const updatedWar: War = { ...this.editedWar, ...this.editForm.value };
+      // Send update request to the service.
       this.service.update(updatedWar, 'war', updatedWar.warId).subscribe(data => {
+        // Log success message and refresh war list
         console.log('War updated successfully:', data);
         this.getAll();
         this.cancelEdit();

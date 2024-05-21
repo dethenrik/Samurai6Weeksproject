@@ -13,11 +13,12 @@ export class ArmourComponent implements OnInit {
   enlargedImageSrc: string = '';
 
   constructor(private service: GenericService<Armour>) {}
-
+// getall will run when Angular initializes the component. 
   ngOnInit(): void {
     this.getArmourImages();
   }
-
+//I call the getall method from generic.service.ts.//
+//I call a table called armour and it want it in a list of arrays//
   getArmourImages(): void {
     this.service.getAll('armour').subscribe(data => {
       this.armourImages = data;

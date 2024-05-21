@@ -20,12 +20,12 @@
 
 <div class="div-center-content">
   <div class="war-list-container">
-    <div *ngIf="warList.length > 0">
+    <div *ngIf="warList.length > 0"><!--only shows list of bigger then 0-->
       <h2 class="warList">List of Wars</h2>
       <table class="war-table">
         <thead>
           <tr>
-            <th class="name">Name</th>
+            <th class="name">Name</th><!--column name-->
             <th class="deathCount">Death Count</th>
             <th class="location">Location</th>
             <th class="action">Actions</th>
@@ -33,7 +33,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let war of warList">
-            <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="name">{{ war?.warName }}</td>
+            <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="name">{{ war?.warName }}</td><!--column data-->
             <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="deathCount">{{ war?.deathCount }}</td>
             <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="location">{{ war?.location }}</td>
             <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="actions">
@@ -41,7 +41,7 @@
               <button type="button" class="btn-edit" (click)="editWar(war)">Edit</button>
             </td>
             <td *ngIf="isEditing && editedWar?.warId === war.warId" colspan="4">
-              <form [formGroup]="editForm" (ngSubmit)="updateWar()">
+              <form [formGroup]="editForm" (ngSubmit)="updateWar()"><!--data edit form-->
                 <input type="text" formControlName="warName" placeholder="War Name">
                 <input type="number" formControlName="deathCount" placeholder="Death Count">
                 <input type="text" formControlName="location" placeholder="Location">
