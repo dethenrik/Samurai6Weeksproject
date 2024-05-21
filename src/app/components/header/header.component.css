@@ -1,0 +1,47 @@
+header {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Add some padding to the top and bottom */
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Center items vertically */
+    max-width: 960px;
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .logo-container {
+    flex-grow: 1; /* Allow the logo container to grow to take up available space */
+  }
+  
+  .logo {
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  .login-button {
+    background-color: gray; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Add padding */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  .home-button {
+    background-color: gray; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Add padding */
+    border-radius: 4px; /* Add border radius */
+    margin-left: 10px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .login-button:hover {
+    background-color: #333; /* Darker background color on hover */
+  }
+  

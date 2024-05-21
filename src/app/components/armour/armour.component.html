@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="page-container">
+  <div class="content-container">
+    <div class="card-menu">
+      <div *ngFor="let armour of armourImages" class="card">
+        <div class="card-img">
+          <img [src]="'../../assets/img/' + armour.img + '.jpg'" alt="{{ armour.armourName }}">
+          <span class="zoom-icon" (click)="showImage(armour.img)"><i class="fas fa-search-plus"></i></span>
+        </div>
+        <div class="card-info">
+          <h2>{{ armour.armourName }}</h2>
+          <p>{{ armour.armourDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for enlarged image -->
+<div class="modal" [class.show]="modalVisible" (click)="hideImage()">
+  <div class="modal-content">
+    <span class="close" (click)="hideImage()">&times;</span>
+    <img [src]="enlargedImageSrc">
+  </div>
+</div>

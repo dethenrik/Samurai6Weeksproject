@@ -1,0 +1,47 @@
+/* it puts the cards horizontally, gives 20px space from the sides, place them in the center  */
+.card-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   
+  }
+  
+  /* gives margin (space) from top, width and height, radius around the cards */
+  .card {
+    margin-top: 50px;
+    width: 300px;
+    height: 360px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure image doesn't overflow */
+    position: relative; /* keeps the textbox on the card */
+  }
+  /* gives the size to the img and makes it fit on the card*/
+  .card img {
+    width: 100%;
+    height: 105%;
+    object-fit: cover;
+  }
+  
+/*it puts the Headers for the cards, like Samurai, Weapon and so on */
+  .card h2 {
+    text-align:start;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+    
+  .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+    transform: scale(1.1); /* Enlarge the card on hover */
+    z-index: 1; /* Ensure the hovered card appears on top */
+  }
+  
+

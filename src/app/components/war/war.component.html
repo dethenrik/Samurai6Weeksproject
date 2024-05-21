@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="page-container">
+  <div class="content-container">
+    <div class="white-box">
+      <h2>War List</h2>
+      
+      <ul class="war-list">
+        <li class="header-row">
+         <b><span class="name">Name</span></b> 
+         <b><span class="deathcount">DEATH COUNT</span></b> 
+         <b><span class="location">LOCATION</span></b> 
+        </li>
+
+        <li *ngFor="let war of wars">
+          <span>{{ war.warName }}</span>
+          <span>{{ war.deathCount }}</span>
+          <span>{{ war.location }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

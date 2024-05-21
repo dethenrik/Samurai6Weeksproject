@@ -1,0 +1,56 @@
+/* Style for card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  /* Style for individual card */
+  .card {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);   }
+ 
+  .vertical-text {
+    font-size: 70px; /* Adjust font size as needed */
+    font-weight: bold;
+    letter-spacing: 5px; /* Adjust spacing between letters as needed */
+    writing-mode: vertical-lr; /* Rotate text to be vertical */
+    text-orientation: upright; /* Keep text orientation upright */
+    line-height: 1; /* Set line-height to 1 to avoid extra spacing */
+    margin-left: 550px;
+    margin-top: 70px;
+  }
+
+  .short-line {
+    width: 1250px; /* Set the width of the line */
+   margin: 0 auto; /* Center the line horizontally */
+    border: none;
+    border-top: 2px solid black; /* Adjust line style as needed */
+    margin-top: 66px;
+    margin-bottom: 60px;
+  }
+
+  .search-container {
+    position: absolute;
+    margin-left: 600px;    
+  }
+  
+  .search-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    width: 250px;
+  }
+  
+
+
+  

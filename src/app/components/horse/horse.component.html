@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="image-container">
+<img src="assets/img/horse.jpg" alt="Image of a horse">
+</div>
+<div class="container">
+<div class="card-container">
+<div class="card" *ngFor="let horse of horseList">
+
+{{ horse.horseName }}
+
+<p> {{ horse.horseDescription }}</p>
+</div>
+</div>

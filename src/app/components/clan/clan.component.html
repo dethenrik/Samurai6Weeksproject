@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="page-container">
+  <div class="content-container">
+    <div class="card-menu">
+      <div *ngFor="let clan of clanImages" class="card">
+        <div class="card-img">
+          <img [src]="'../../assets/img/' + clan.img + '.jpg'" alt="{{ clan.clanName }}">
+        </div>
+        <div class="card-info">
+          <h2>{{ clan.clanName }}</h2>
+          <h2>hi</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

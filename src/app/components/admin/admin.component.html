@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="form-container">
+  <form class="create-form" [formGroup]="warForm" (ngSubmit)="create()">
+    <input type="text" name="warName" id="warName" placeholder="War Name" formControlName="warName">
+    <small>
+      <div *ngIf="warForm.get('warName')?.invalid && warForm.get('warName')?.touched">
+        War Name is required.
+      </div>
+    </small>
+    <input type="number" name="deathCount" id="deathCount" placeholder="Death Count" formControlName="deathCount">
+    <input type="text" name="location" id="location" placeholder="Location" formControlName="location">
+    <button class="create-button" type="submit">Create War</button>
+  </form>
+</div>
+
+<div>
+  <hr class="hrtopnav"> 
+</div>
+
+<div class="div-center-content">
+  <div class="war-list-container">
+    <div *ngIf="warList.length > 0">
+      <h2 class="warList">List of Wars</h2>
+      <table class="war-table">
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th class="deathCount">Death Count</th>
+            <th class="location">Location</th>
+            <th class="action">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let war of warList">
+            <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="name">{{ war?.warName }}</td>
+            <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="deathCount">{{ war?.deathCount }}</td>
+            <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="location">{{ war?.location }}</td>
+            <td *ngIf="!isEditing || editedWar?.warId !== war.warId" class="actions">
+              <button type="button" class="btn-delete" (click)="deleteWar(war.warId)">Delete</button>
+              <button type="button" class="btn-edit" (click)="editWar(war)">Edit</button>
+            </td>
+            <td *ngIf="isEditing && editedWar?.warId === war.warId" colspan="4">
+              <form [formGroup]="editForm" (ngSubmit)="updateWar()">
+                <input type="text" formControlName="warName" placeholder="War Name">
+                <input type="number" formControlName="deathCount" placeholder="Death Count">
+                <input type="text" formControlName="location" placeholder="Location">
+                <button type="submit" class="update-button">Save Changes</button>
+                <button type="button" class="cancel-button" (click)="cancelEdit()">Cancel</button>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

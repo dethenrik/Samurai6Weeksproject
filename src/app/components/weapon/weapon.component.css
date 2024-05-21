@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 200px; /* Just an example width */
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card p {
+    margin: 0;
+  }
+  
+  .card .card-body {
+    padding: 10px;
+  }
+  

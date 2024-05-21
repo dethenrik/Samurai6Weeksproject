@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="container">
+    <div *ngFor="let weapon of weaponList" class="card">
+      <img src="../../assets/img/{{weapon.img}}.jpg" alt="{{weapon.img}}">
+      <div class="card-body">
+        <p>{{ weapon.weaponName }}</p>
+      </div>
+    </div>
+  </div>

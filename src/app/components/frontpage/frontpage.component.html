@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+
+<div class="card-menu"> 
+  <div *ngFor="let item of imageUrls  ">
+    <div class="card" (click)="navigateToPage(item.name)">
+        <img src="../../assets/img/{{item.img}}.jpg" alt="{{item.img}}">
+        <h2>{{item.name}}</h2>
+    </div>
+  </div>
+
+</div>
+
+
+

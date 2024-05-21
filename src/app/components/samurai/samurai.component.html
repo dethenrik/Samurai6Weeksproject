@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="search-container">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by name" (input)="applySearchFilter()">
+</div>
+
+
+<div class="card-container">
+  <div class="card" *ngFor="let samurai of filteredSamuraiList">
+    <h2>{{ samurai.samuraiName }}</h2>
+    <p>Age: {{ samurai.age }}</p>
+    <p>Description: {{ samurai.description }}</p>
+    
+
+    <p>Weapon:</p>
+    <ul>
+      <li *ngFor="let weapon of samurai.weapon">{{ weapon.weaponName }}</li>
+    </ul>
+
+
+    <p>Armour:</p>
+    <ul>
+      <li *ngFor="let armour of samurai.armour">{{ armour.armourName }}</li>
+    </ul>
+
+    <p>Horse:</p>
+    <ul>
+      <li *ngFor="let horse of samurai.horse">{{ horse.horseName }}</li>
+    </ul>
+  </div>
+</div>

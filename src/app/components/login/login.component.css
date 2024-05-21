@@ -1,0 +1,64 @@
+/* Main styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Match your font family */
+    color: #f2f2f2; /* Match your text color */
+}
+
+
+
+/* Login form styles */
+.login-container {
+    width: 300px;
+    margin: 100px auto; /* Adjust margin to position the form */
+    padding: 80px;
+    background-color: #f2f2f2; /* Match your front page container background color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff; /* Match your background color */
+    color: #333; /* Match your text color */
+}
+
+input[type="email"],
+input[type="password"] {
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 30%; /* Set button width to fill its container */
+    padding: 10px; 
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,137 @@
+/* Global styles */
+* {
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container styles */
+  .page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .content-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* White box styles for the war list */
+  .war-list-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  /* Header styles for war list */
+  .warList {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .war-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .war-table th,
+  .war-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .war-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .war-table td.actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Button styles */
+  .btn-delete, .btn-edit, .update-button, .cancel-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-delete {
+    background-color: #ff6347;
+    color: white;
+  }
+  
+  .btn-edit {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .update-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #ccc;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #e53935;
+  }
+  
+  .btn-edit:hover, .update-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .cancel-button:hover {
+    background-color: #999;
+  }
+  
+  /* Form container styles */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-form {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+  }
+  
+  .create-form input[type="text"],
+  .create-form input[type="number"],
+  .create-form button[type="submit"],
+  .create-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Small style */
+  small {
+    display: block;
+    color: #ff6347;
+    margin-top: 5px;
+  }
+  

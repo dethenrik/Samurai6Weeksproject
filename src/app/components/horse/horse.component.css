@@ -1,0 +1,55 @@
+
+.header-container {
+    text-align: center; /* Center the content horizontally */
+    }
+    
+.vertical-text {
+font-size: 70px; /* Adjust font size as needed */
+font-weight: bold;
+letter-spacing: 5px; /* Adjust spacing between letters as needed */
+writing-mode: vertical-lr; /* Rotate text to be vertical */
+text-orientation: upright; /* Keep text orientation upright */
+line-height: 1; /* Set line-height to 1 to avoid extra spacing */
+margin-left: 500px;
+margin-top: 50px;
+}
+
+.short-line {
+width: 1250px; /* Set the width of the line */
+margin: 0 auto; /* Center the line horizontally */
+border: none;
+border-top: 2px solid black; /* Adjust line style as needed */
+margin-top: 66px;
+}
+/* Style for card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    }
+    
+    /* Style for individual card */
+    .card {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+
+.image-container {
+    text-align: center; /* Center the content horizontally */
+    margin-top: 20px; /* Adjust margin top as needed */
+    
+    }
+    
+    .image-container img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    max-height: 300px; /* Adjust max-height as needed */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    
+    }
