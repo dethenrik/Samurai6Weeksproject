@@ -12,7 +12,7 @@ export class WeaponComponent {
   weaponList: Weapon[] = [];
 
   constructor(private service: GenericService<Weapon>) { }
-// getall will run when Angular initializes the component.
+// getall will run when Angular initializes the component
   ngOnInit(): void {
     this.getAll();
   }
